@@ -31,7 +31,7 @@ public class CounterActivity extends AppCompatActivity implements SensorEventLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_counter);
 
         finish = findViewById(R.id.button_finish);
         steps = findViewById(R.id.steps);
