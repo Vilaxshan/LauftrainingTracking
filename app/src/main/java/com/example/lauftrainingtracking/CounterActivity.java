@@ -56,6 +56,8 @@ public class CounterActivity extends AppCompatActivity implements SensorEventLis
     }
 
 
+    // switch to the start page (activity_main) doesnt works correctly
+    // I tried it also with "setContentView(R.layout.activity_main);"
     private void switchActivities() {
         Intent switchActivityIntent = new Intent(this, MainActivity.class);
         startActivity(switchActivityIntent);
