@@ -102,10 +102,10 @@ public class CounterActivity extends AppCompatActivity implements SensorEventLis
 
     private void createNotification() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("")
-                .setContentText("")
+                .setContentTitle("Lauftraing-Tracking")
+                .setContentText("Du hast dein Lauftraing erfolgreich abgeschlossen.")
                 .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText(""))
+                        .bigText("Glückwunsch!"))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
