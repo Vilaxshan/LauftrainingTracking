@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Lauftraining Tracking</string>
+    <string name="button_start">Starten</string>
+    <string name="title">Fitness-Training</string>
+    <string name="steps_title"><u>Anzahl Schritte:</u></string>
+    <string name="title_counter">Dein Trainig hat begonnen:</string>
+    <string name="steps_title_counter"><u>Deine Schritte:</u></string>
+    <string name="button_finish">Fertig</string>
+    <string name="steps">0</string>
+    <string name="channel_name">chanel</string>
+    <string name="channel_description">A notification chanel</string>
 </resources>
