@@ -3,6 +3,7 @@ package com.example.lauftrainingtracking;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -20,7 +21,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 public class CounterActivity extends AppCompatActivity implements SensorEventListener {
 
-    Button finish;
+    Button finish_button;
 
     TextView steps;
 
@@ -33,21 +34,33 @@ public class CounterActivity extends AppCompatActivity implements SensorEventLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
 
-        finish = findViewById(R.id.button_finish);
+        finish_button = findViewById(R.id.button_finish);
         steps = findViewById(R.id.steps);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
 
-        finish.setOnClickListener(new View.OnClickListener() {
+
+        finish_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_main);
+                //setContentView(R.layout.activity_main);
+                //Intent i = new Intent(CounterActivity.this, MainActivity.class);
+                //startActivity(i);
 
                 notificationChannel();
                 createNotification();
+                switchActivities();
+
             }
         });
     }
+
+
+    private void switchActivities() {
+        Intent switchActivityIntent = new Intent(this, MainActivity.class);
+        startActivity(switchActivityIntent);
+    }
+
 
     @Override
     protected void onResume() {
